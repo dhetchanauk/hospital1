@@ -1,0 +1,170 @@
+body {
+                
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('hospital-website-background-7.jpg');
+     }
+* {
+margin: 0;
+padding: 0;                           
+box-sizing: border-box;
+  }
+
+body {
+font-family: "Roboto", sans-serif;             
+    }
+
+h1 {
+position: relative;
+font-size: 3rem;                         
+font-weight: 500;   
+text-align: center;
+  }
+
+a {
+position: relative;
+font-size: 2.5rem;                       
+font-weight: 500;
+text-align: center;
+   }
+
+p {
+position: relative;
+font-size: 1rem;
+font-weight: 500;                        
+text-align: center;
+  }
+
+.firstsection {
+position: relative;
+width: 100%;
+height: 100vh;
+background: linear-gradient(rgba(11, 49, 120, 0.849), rgba(39, 50, 174, 0.5));                
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+color: #f8f6f6;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+              }
+.wrapper {
+position: relative;                       
+width: 50%;
+height: 40%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-direction: column;
+         } 
+.wrapper a {
+position: relative;
+text-decoration: none;
+color: #24067e;
+background: rgb(244, 245, 241);     
+font-size: 1.0rem;
+font-weight: 400;
+text-transform: capitalize;
+padding: 1rem 1rem;
+border-radius: 25px;
+           }
+
+
+.secmaindiv {
+position: relative;
+width: 70%;  
+height: 50%;
+display: flex;                     
+align-items: center;
+justify-content: space-evenly;
+text-align: center;
+overflow: anywhere;
+overflow-wrap: break-word;
+          }
+
+
+.secmaindiv > div {
+position: relative;
+width: 30%;                                   
+height: 80%;
+display: flex;
+align-items: flex-start;
+justify-content: space-evenly;
+flex-direction: column;
+word-wrap:break-word;
+overflow:hidden;
+  }
+
+ .secmaindiv > div:hover { 
+transform: scale(1.05);                                  
+transition: all 0.5s ease-in-out;
+cursor: pointer;
+                      }
+.secmaindiv > div a{
+  text-align: center;
+  overflow:visible;
+  word-break: normal;
+}
+
+.secmaindiv > div p {                             
+width: 110%;
+text-align: left;
+overflow-wrap:anywhere ;                                          
+                  }
+
+.secmaindiv > .div1 {
+ background:  rgba(224, 219, 219, 0.7);
+word-wrap:break-word;
+
+                    }
+
+.secmaindiv > .div2 {
+background: rgba(224, 219, 219, 0.7);
+                    }
+
+.secmaindiv > .div3 {
+  background: rgba(224, 219, 219, 0.7);
+                    }
+
+.div1 a {
+position: relative;
+text-decoration: none;
+text-align: center;   
+font-weight: 400;
+text-transform: capitalize;
+padding: 1rem 1rem;
+border-radius: 25px;
+color: aliceblue;
+}       
+.div3 a:visited{
+text-decoration: none
+}             
+.div3 a {
+position: relative;
+text-decoration: none;
+text-align: center;   
+font-weight: 400;
+text-transform: capitalize;
+padding: 1rem 1rem;
+border-radius: 25px;
+color: aliceblue;
+}       
+.div3 a:visited{
+text-decoration: none;
+}    
+.div2 a {
+  position: relative;
+  text-decoration: none;
+  text-align: center;   
+  font-weight: 400;
+  text-transform: capitalize;
+  padding: 1rem 1rem;
+  border-radius: 25px;
+  color: aliceblue;
+  }       
+.div2 a:visited{
+  text-decoration: none;
+  }            
+                   

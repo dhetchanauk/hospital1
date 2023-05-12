@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <section>
+
+        <div class="form-container">
+            <h1>Login</h1>
+
+            <form name="myForm">
+
+                <div class="control">
+                    <label for="fname">NAME</label>
+                    <input type="text"  name="fname" placeholder="Name">
+                </div>
+
+                <div class="control">
+                    <label for="pwd">PASSWORD</label>
+                    <input type="password" name="pwd" id="pwd" placeholder="Password">
+                </div>
+
+                    <span><input type="checkbox">Remember me</span><br>
+                    <a href="#">Forgot Password ?</a>
+
+                <div class="control">
+                    <input  type="submit" value="Login" >
+                </div>
+            
+                
+
+            </form>
+            <div class="link">
+                <span>Don't have an account?</span><a href="signup.html">Sign up</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        const a=document.getElementById("username");
+        const b=document.getElementById("password");
+        console.log(a);
+        console.log(b);
+        function check(){
+        const usern=JSON.parse(localStorage.getItem("user_name")) || [];
+        const pword=JSON.parse(localStorage.getItem("passw")) || [];
+        if(a.value==null || a.value=="      "){
+            alert("Name is mandatory");
+        }
+        else if(usern.indexOf(a.value)==-1){
+            alert("You are not a member. Sign up to continue");
+            window.open("d signup.html");
+            //window.location.href="register.html";
+        }
+        else{
+            let indun=usern.indexOf(a.value);
+            let p=pword[indun];
+            if(p==b.value){
+                alert("Login is Successful");
+                window.open("home.html");
+                //window.location.href="home.html";
+            }
+            else{
+                alert("Wrong Password");
+            }
+        }
+        }   
+</script>
+
+    
+</body>
+
+</html>

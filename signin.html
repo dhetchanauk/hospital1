@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signin.css">
+    <title>Sign In</title>
+</head>
+<body>
+    <center>
+    <div class="form-box">
+        <form name='myform' class="form" method="post" onsubmit="return validateform();">
+            <span class="title">Sign In</span>
+            
+            <div class="form-container">
+                <input type="text" class="input js-name" placeholder="Enter your name" name="Username" required>
+                <input type="email" class="input js-email" placeholder="Email" required>
+                <input name="password" type="password" class="input js-pass" placeholder="Password" required>
+            </div>
+            <button type="submit">Sign In</button>
+        </form>
+        
+    </div>
+</center>
+<script >
+    function validateform(){  
+      var name=document.myform.Username.value;  
+      var password=document.myform.password.value; 
+      const usname=JSON.parse(localStorage.getItem('username')) || [];
+      const pwd=JSON.parse(localStorage.getItem('password')) || []; 
+        
+      if (name==null || name=="     "){  
+        alert("Name can't be blank");  
+        return false;  
+      }else if(password.length<0){  
+        alert("Password must be at least 6 characters long.");  
+        return false;  
+        }  
+      else if(usname.indexOf(name) ==-1){
+        alert("First Time User? Please Sign Up");
+        window.location.href = "signup.html";
+        return false;
+      }
+      else {
+        let ind=usname.indexOf(name);
+        let pass=pwd[ind];
+        if (pass==password){
+          alert("Loged In Successfully");
+          window.location.href="main.html";
+          return false;
+        }
+        else {
+            alert("Wrong Password");
+            return false;
+        }
+        }
+      }
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign up</title>
+</head>
+<body>
+    <center>
+    <div class="form-box">
+    
+    <form class="form" method="post" name='myform' onsubmit="return validate()">
+            <span class="title">Sign up</span>
+            <span class="subtitle">create a free account with your email.</span>
+            <div class="form-container">
+                <input name='email' type="text" class="input js-name" placeholder="Enter your name" required>
+                <input type="email" class="input js-email" placeholder="Email" required>
+                <input name="password" type="password" class="input js-pass" placeholder="Password" required>
+            </div>
+            <button type='submit'>Sign up</button>
+        </form>
+        <div class="form-section">
+            <p>Have an account? <a href="signin.html">Log in</a></p>
+        </div>
+    </div>
+</center>
+<script >
+    const usname=[];
+            const pwd=[];
+            function validate(){
+                var name=document.myform.email.value;
+                var password=document.myform.password.value;
+                
+                if(password.length<0){
+                  alert("Length of Passord must be greater than 6");
+                  return false;
+                }
+                
+                else{
+                    const usname=JSON.parse(localStorage.getItem('username')) || [];
+                    const pwd=JSON.parse(localStorage.getItem('password')) || [];
+                    if(usname.indexOf(name)==-1){
+                      usname.push(name);
+                      pwd.push(password);
+                    localStorage.setItem('username',JSON.stringify(usname));
+                    localStorage.setItem('password',JSON.stringify(pwd)); 
+                      const userData = {};
+                      userData[name] = password;
+                      location.replace("signin.html");
+                      return false;
+                    }
+                    else{
+                      alert("User Id already Exsist");
+                      window.location.href="signin.html";
+                      return false;
+                    }
+                    localStorage.setItem('username',JSON.stringify(usname));
+                    localStorage.setItem('password',JSON.stringify(pwd)); 
+                }
+            }
+    
+</script>
+</body>
+</html>

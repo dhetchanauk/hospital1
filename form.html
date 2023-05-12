@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Form</title>
+    <link rel="stylesheet" href="form.css">
+
+</head>
+<body>
+    <section class="container">
+        <header>Appointment Form</header>
+            <form action="#" class="form">
+                <div class="input-box">
+                  <label>Full Name</label>
+                  <input type="text" placeholder="Enter Name">
+                </div>
+
+                <div class="input-box">
+                    <label>Mail Id</label>
+                    <input type="text" placeholder="Enter Mail Id">
+                </div>
+
+                <div class="column">
+                    <div class="input-box">
+                        <label>Phone Number</label>
+                        <input type="number" placeholder="Enter Phone Number">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Birth Date</label>
+                        <input type="date" placeholder="Enter Birth Date">
+                    </div>
+                    <div class="input-box">
+                        <label>Date Of Appointment</label>
+                        <input type="date" placeholder="Date Of Appointment">
+                    </div>
+                </div>
+                <br>
+                <div class="gender-box">
+                    <h3>Gender</h3>
+                    <div class="gender-option">
+                        <div class="gender">
+                            <input type="radio" id="check-male" name="gender" checked/>
+                            <label for="check-male">Male</label>
+                        </div>
+                        <div class="gender">
+                            <input type="radio" id="check-female" name="gender" checked/>
+                            <label for="check-female">Female</label>
+                        </div>
+                        <div class="gender">
+                            <input type="radio" id="check-other" name="gender" checked/>
+                            <label for="check-other">Other</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-box addres">
+                    <label>Address</label>
+                    <input type="text" placeholder="Enter Address">
+                    
+                    <div class="column">
+                        <div class="select-box">
+                            <select>
+                                <option hidden>State</option>
+                                <option>Tamil Nadu</option>
+                                <option>Kerala</option>
+                                <option>Karnataka</option>
+                                <option>Andhra Pradesh</option>
+                            </select>
+                        </div>
+                        <input type="text" placeholder="Enter City">
+                    </div>
+
+                    <div class="column">
+                        <input type="number" placeholder="Enter pincode">
+                    </div>
+                </div>
+                <br>
+                <button>Submit</button>
+            </form>
+        </section>
+    </body>  
+</html>         
+
